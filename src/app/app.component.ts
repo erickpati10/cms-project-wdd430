@@ -4,8 +4,16 @@ import { Component } from '@angular/core';
   selector: 'cms-root',
   templateUrl: './app.component.html',
   standalone: false,
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'cms';
+
+  selectedFeature: string = 'documents';
+
+  constructor() {}
+
+  switchView(selectedFeature: string) {
+    this.selectedFeature = selectedFeature;
+  }
 }
