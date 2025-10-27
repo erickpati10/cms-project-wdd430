@@ -1,7 +1,10 @@
-<a class="list-group-item clearfix documentDiv">
+<a style="cursor: pointer" class="list-group-item clearfix documentDiv">
   <!-- Display document name here -->
   <div>
-    <h4 class="list-group-item-heading">{{ document.name }}</h4>
+    <a [routerLink]="[document.id]" routerLinkActive="active">
+      {{ document.name }}
+    </a>
+
     <p class="list-group-item-text">{{ document.description }}</p>
   </div>
 </a>

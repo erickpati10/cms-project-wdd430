@@ -1,0 +1,5 @@
+.active {
+  font-weight: bold;
+  color: #1976d2; /* blue accent */
+  border-bottom: 2px solid #1976d2;
+}

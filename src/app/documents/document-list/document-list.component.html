@@ -2,14 +2,17 @@
   <div class="panel-heading">
     <div class="row pad-left-right">
       <span class="pull-left title">Documents</span>
-      <button class="btn btn-success pull-right">Add Document</button>
+      <button class="btn btn-success pull-right" [routerLink]="['new']">
+        Add Document
+      </button>
     </div>
   </div>
   <div class="panel-body">
     <div class="center-panel">
       <cms-document-item
         *ngFor="let document of documents"
-        (click)="onSelectedDocument(document)"
+        [routerLink]="[document.id]"
+        routerLinkActive="active"
         [document]="document"
       >
       </cms-document-item>

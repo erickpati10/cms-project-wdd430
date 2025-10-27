@@ -1,6 +1,8 @@
-<div class="list-group-item clearfix">
+<div style="cursor: pointer" class="list-group-item clearfix">
   <span class="pull-left" style="line-height: 100px">
-    <strong>{{ contact.name }}</strong>
+    <a [routerLink]="[contact.id]" routerLinkActive="active">
+      {{ contact.name }}
+    </a>
   </span>
   <img
     [src]="contact.imageUrl"
